@@ -1,11 +1,12 @@
 body {
   font-family: sans-serif;
-  /* width: 100vw; */
   height: 100vh;
   margin: auto;
 }
 
 a {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: black;
 }
@@ -19,23 +20,17 @@ a:focus {
 }
 
 #root-container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   background-color: white;
 }
 
 #top-container {
   display: flex;
   flex-direction: column;
-  flex-basis: 25%;
-  flex-grow: 1;
-}
-
-#header-container {
-  /* flex-basis: 60%;
-  flex-grow: 1; */
+  position: sticky;
 }
 
 #header-container h1 {
@@ -51,15 +46,12 @@ a:focus {
 
 #navigation-container a {
   flex-basis: 10%;
-  align-items: stretch;
-  text-align: center;
+  justify-content: center;
 }
 
 #whiteboard-container {
   display: flex;
   flex-direction: row;
-  flex-basis: 75%;
-  flex-grow: 1;
 }
 
 #sidebar-container {
@@ -67,17 +59,13 @@ a:focus {
   flex-direction: column;
   flex-basis: 25%;
   flex-grow: 1;
-  height: 100%;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .menu-section-container {
+  height: 300pt;
   display: flex;
   flex-direction: column;
-  height: 300pt;
-}
-
-.menu-section-container * {
   margin-left: 10pt;
   margin-right: 30pt;
 }
@@ -87,7 +75,6 @@ a:focus {
   flex-direction: column;
   flex-basis: 75%;
   flex-grow: 1;
-  height: 100%;
   overflow: auto;
 }
 
@@ -110,7 +97,7 @@ a:focus {
 #right-container {
   display: flex;
   flex-direction: column;
-  flex-basis: 16%;
+  flex-basis: 20%;
   flex-grow: 1;
 }
 
