@@ -1,8 +1,21 @@
 body {
   font-family: sans-serif;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  background-color: dimgrey;
+}
+
+a:focus {
+  background-color: limegreen;
 }
 
 #root-container {
@@ -20,6 +33,28 @@ body {
   flex-grow: 1;
 }
 
+#header-container {
+  /* flex-basis: 60%;
+  flex-grow: 1; */
+}
+
+#header-container h1 {
+  text-align: center;
+}
+
+#navigation-container {
+  display: flex;
+  flex-direction: row;
+  height: 30pt;
+  background-color: slategray;
+}
+
+#navigation-container a {
+  flex-basis: 10%;
+  align-items: stretch;
+  text-align: center;
+}
+
 #whiteboard-container {
   display: flex;
   flex-direction: row;
@@ -32,6 +67,19 @@ body {
   flex-direction: column;
   flex-basis: 25%;
   flex-grow: 1;
+  height: 100%;
+  overflow: auto;
+}
+
+.menu-section-container {
+  display: flex;
+  flex-direction: column;
+  height: 300pt;
+}
+
+.menu-section-container * {
+  margin-left: 10pt;
+  margin-right: 30pt;
 }
 
 #body-container {
@@ -39,6 +87,8 @@ body {
   flex-direction: column;
   flex-basis: 75%;
   flex-grow: 1;
+  height: 100%;
+  overflow: auto;
 }
 
 #content-container {
@@ -53,6 +103,10 @@ body {
   flex-grow: 1;
 }
 
+.main-section-container {
+  height: 300pt;
+}
+
 #right-container {
   display: flex;
   flex-direction: column;
@@ -60,7 +114,17 @@ body {
   flex-grow: 1;
 }
 
+.right-section-container {
+  height: 300pt;
+}
+
 #footer-container {
   display: flex;
   flex-direction: row;
+}
+
+.footer-section-container {
+  flex-basis: 25%;
+  flex-grow: 1;
+  height: 100pt;
 }
