@@ -1,6 +1,43 @@
 (() => {
   "use strict";
 
+  const headerContainer = {
+    id: 'header-container',
+    content: 'h1',
+    text: 'w3schools'
+  }
+
+  const headerContainerCreator = (headerContainer, parent) => {
+    const container = document.createElement('div');
+    container.setAttribute(headerContainer.id);
+    const content = document.createElement(headerContainer.content);
+    const text = document.createTextNode(headerContainer.text);
+    content.append(text);
+    container.append(content);
+    parent.append(container);
+  }
+
+  const navigationContianer = {
+    id: 'navigation-contianer',
+    textList: ['HTML', 'CSS', 'JAVASCRIPT'],
+    hrefList: ['/html', '/css', '/javascript']
+  }
+
+  const navigationContainerCreator = (navigationContainer, parent) => {
+    const container = document.createElement('div');
+    container.setAttribute(navigationContainer.id);
+    for (let i = 0; i < navigationContainer.textList.length; i++) {
+      const link = document.createElement('a');
+      link.setAttribute('href', navigationContainer.hrefList[i]);
+      const content = document.createElement('span');
+      const text = document.createTextNode(navigationContainer.textList[i]);
+      content.append(text);
+      link.append(content);
+      container.append(link);
+    }
+    parent.append(container);
+  }
+
   const render = (element, container) => {
     // when element type is string, create text node.
     if (typeof element === 'string') {
